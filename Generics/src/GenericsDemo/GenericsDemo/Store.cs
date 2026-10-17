@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GenericsDemo
 {
-    public class Store<T>
+    public class Store<T> where T : IHasId
     {
         private readonly List<T> _items = new();
 
@@ -21,7 +21,7 @@ namespace GenericsDemo
                 if (t.Id == id) 
                     return t;
             }
-            return null;
+            return default;
         }
         public List<T> GetAll()
         {
