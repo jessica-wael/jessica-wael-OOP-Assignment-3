@@ -18,3 +18,12 @@ step 3:
 
         T can be any type , so T can be Student , Course , string or int .
         So the compiler sees that (item.Id) might not work for some types, so it stops us before the program runs.
+
+
+
+Step 7:
+//var invalidLine = new Store<string>();   
+   // MUST NOT COMPILE
+
+   because Store<T> has the rule (where T : IHasId) and this mean that T must has Id, So string doesn't 
+   implement the "IHasId".
